@@ -1,0 +1,20 @@
+Description
+A one-time pad is unbreakable, but can you manage to recover the flag? (Wrap with picoCTF{}) nc mercury.picoctf.net 41934 otp.py
+
+Hints:
+Maybe there's a way to make this a 2x pad.
+
+
+Prozess:
+
+┌──(root㉿kali)-[/home/…/Desktop/PicoCTF/Cryptography/Easy_Peasy]
+└─# nc mercury.picoctf.net 41934
+******************Welcome to our OTP implementation!******************
+This is the encrypted flag!
+0345376e1e5406691d5c076c4050046e4000036a1a005c6b1904531d3941055d
+
+What data would you like to encrypt? otp.py
+Here ya go!
+330c141f2c01
+
+
