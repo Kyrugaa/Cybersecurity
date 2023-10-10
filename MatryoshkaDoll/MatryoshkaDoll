@@ -1,0 +1,14 @@
+Description
+Matryoshka dolls are a set of wooden dolls of decreasing size placed one inside another. What's the final one? Image: this
+
+Hints:
+Wait, you can hide files inside files? But how do you find them?
+Make sure to submit the flag as picoCTF{XXXXX}
+
+run binwalk 4 times on each new image
+
+run binwalk -e /home/kali/Desktop/PicoCTF/Forensics/MatryoshkaDoll/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted/base_images/_3_c.jpg.extracted/base_images/4_c.jpg --run-as=root
+
+
+
+picoCTF{4cf7ac000c3fb0fa96fb92722ffb2a32}  
