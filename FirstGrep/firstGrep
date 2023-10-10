@@ -1,0 +1,24 @@
+Description
+Can you find the flag in file? This would be really tedious to look through manually, something tells me there is a better way.
+
+
+Hints:
+grep tutorial
+
+
+Prozess:
+└─# strings file | grep pico   
+picoCTF{grep_is_good_to_find_things_5af9d829}
+
+
+# The strings below are 7 possibilities for the correct password. 
+#   (Only 1 is correct)
+pos_pw_list = ["6997", "3ac8", "f0ac", "4b17", "ec27", "4e66", "865e"]
+
+
+┌──(kali㉿kali)-[~/Desktop/PicoCTF/General Skills/PW_Crack_3]
+└─$ python level3.py 
+Please enter correct password for flag: 865e
+Welcome back... your flag, user:
+picoCTF{m45h_fl1ng1ng_2b072a90}
+                                

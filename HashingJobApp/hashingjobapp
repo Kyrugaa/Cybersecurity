@@ -1,0 +1,32 @@
+Description
+If you want to hash with the best, beat this test! nc saturn.picoctf.net 53638
+
+
+Hints:
+You can use a commandline tool or web app to hash text
+
+Press Ctrl and c on your keyboard to close your connection and return to the command prompt.
+
+
+Process:
+
+Online Tool
+                                                              
+┌──(kali㉿kali)-[~/Desktop/PicoCTF/General Skills/HashingJobApp]
+└─$ nc saturn.picoctf.net 53638     
+Please md5 hash the text between quotes, excluding the quotes: 'apple pie'
+Answer: 
+b9fcf57e16fa23b2d81bc587ffde4788
+b9fcf57e16fa23b2d81bc587ffde4788
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'having an operation'
+Answer: 
+e8911c168f3f28c385ac7f3e4d0682cc
+e8911c168f3f28c385ac7f3e4d0682cc
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'morticians'
+Answer: 
+f6dfb72af8c3e3397851094d7f1a8605
+f6dfb72af8c3e3397851094d7f1a8605
+Correct.
+picoCTF{4ppl1c4710n_r3c31v3d_bf2ceb02}

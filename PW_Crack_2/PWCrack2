@@ -1,0 +1,32 @@
+Description
+Can you crack the password to get the flag? Download the password checker here and you'll need the encrypted flag in the same directory too.
+
+
+Hints:
+Does that encoding look familiar?
+
+The str_xor function does not need to be reverse engineered for this challenge.
+
+
+Process:
+
+wget
+
+watched at code:
+
+if( user_pw == chr(0x33) + chr(0x39) + chr(0x63) + chr(0x65) ): looks sus
+
+make a new script:
+print(chr(0x33) + chr(0x39) + chr(0x63) + chr(0x65))
+
+
+┌──(kali㉿kali)-[~/Desktop/PicoCTF/General Skills/PW_Crack_2]
+└─$ python3 script.py 
+39ce
+                                                                                                                    
+┌──(kali㉿kali)-[~/Desktop/PicoCTF/General Skills/PW_Crack_2]
+└─$ python3 level2.py 
+Please enter correct password for flag: 39ce
+Welcome back... your flag, user:
+picoCTF{tr45h_51ng1ng_502ec42e}
+                                 

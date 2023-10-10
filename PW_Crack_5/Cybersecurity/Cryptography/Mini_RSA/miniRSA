@@ -1,0 +1,51 @@
+What happens if you have a small exponent? There is a twist though, we padded the plaintext so that (M ** e) is just barely larger than N. Let's decrypt this: ciphertext
+
+
+Hints:
+RSA tutorial
+
+How could having too small of an e affect the security of this key?
+-Da die Primzahltest inzwischen ausreichend schnell sind, wählt man heutzutage zuerst einen kleinen Exponenten
+	e mit 2 hoch 16 < e < 2 hoch 64    und verwirft bei der Erzeugung die Primzahlen p,q für die p-1, q-1
+	nicht teilfremd zu e sind
+	
+Make sure you don't lose precision, the numbers are pretty big (besides the e value)
+You shouldn't have to make too many guesses
+pico is in the flag, but not at the beginning
+
+
+Process:
+
+wget cyphertext
+
+
+
+Script:
+import gmpy2
+
+# Gegebene Werte
+N = 
+e = 
+ciphertext = 
+
+# RSA-Entschlüsselung mit kleinem Exponenten (e = 3)
+plaintext = gmpy2.iroot(ciphertext, e)
+plaintext = plaintext[0]  # Der Entschlüsselungsvorgang gibt ein Tupel zurück, wir benötigen das erste Element
+
+# Das Ergebnis ist eine Ganzzahl, die die entschlüsselte Nachricht darstellt
+print("Entschlüsselte Nachricht:", plaintext)
+
+
+
+
+
+┌──(kali㉿kali)-[~/Desktop]
+└─$ python RSA_Decrypt.py                            
+Entschlüsselte Nachricht: 495969235673842330826653369941231722108388582233794374644229353035485724758742348176332549480700272631477127204474581800731216399371346459934444851080254728911622163
+
+
+
+
+Paused:
+https://de.wikipedia.org/wiki/RSA-Kryptosystem
+https://de.wikipedia.org/wiki/Optimal_Asymmetric_Encryption_Padding

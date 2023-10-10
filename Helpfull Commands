@@ -1,0 +1,56 @@
+Move Files --> mv
+
+
+touch --> create file
+
+
+open filename.filetype
+
+
+safe output in a file --> output > output.txt
+
+search for a string --> strings file.txt | grep "what you wanna search"
+search for more than one string --> strings file.txt | grep -E "word1|word2|word3"
+search a whole directory for a string --> grep -R "what u wanna search" /path/to/files
+
+Decode file or string with base64:
+echo 'bGludXhoaW50LmNvbQo=' | base64 --decode
+echo file.txt | base64 --decode
+
+
+netcat connecting:
+nc jupiter.challenges.picoctf.org 41120   			(port ganz am Schluss)
+You're on your way to becoming the net cat master
+picoCTF{nEtCat_Mast3ry_3214be47}
+
+
+Run this program by entering the following in the Terminal prompt: $ ./warm, but you'll first have to make it executable with $ chmod +x warm
+
+
+run a program with a script:
+./demo.sh demoprogram
+
+
+open a jpg:
+fim -a image.jpg
+
+open a png:
+mimeopen -d image.png
+
+search for other files in a jpg:
+binwalk -e dolls.jpg --run-as=root
+
+convert images:
+convert tunn3l_v1s10n.bmp tunn3l_v1s10n.jpg			(bmp to jpg)
+
+
+Open a textfile in a python script and make a array:
+
+file = open("dictionary.txt", "r")
+data = file.read()
+
+list = data.replace('\n', ', ').split(".")
+
+
+print(list)
+file.close()
