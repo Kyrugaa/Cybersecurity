@@ -42,15 +42,18 @@ def check():
     file = open('dictionary.txt', 'r')
     pos_pw_list = file.read()
 
-    psw = pos_pw_list.replace('\n', ', ').split('.')
+    psw = pos_pw_list.split('\n')
+
     print(pos_pw_list)
-    for psw in pos_pw_list:
-        print(psw)
-        user_pw_hash = hash_pw(psw)
+
+
+    for i in psw:
+        print(i)
+        user_pw_hash = hash_pw(i)
         
         if( user_pw_hash == correct_pw_hash ):
             print("Welcome back... your flag, user:")
-            decryption = str_xor(flag_enc.decode(), psw)
+            decryption = str_xor(flag_enc.decode(), i)
             print(decryption)
             break
         else:

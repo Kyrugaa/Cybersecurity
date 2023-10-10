@@ -16,4 +16,35 @@ Process:
 
 wget 
 
+change Script:
+new function to brute force every password from the dictionary.txt:
+
+def check():
+
+    file = open('dictionary.txt', 'r')
+    pos_pw_list = file.read()
+
+    psw = pos_pw_list.split('\n')
+
+    print(pos_pw_list)
+
+
+    for i in psw:
+        print(i)
+        user_pw_hash = hash_pw(i)
+        
+        if( user_pw_hash == correct_pw_hash ):
+            print("Welcome back... your flag, user:")
+            decryption = str_xor(flag_enc.decode(), i)
+            print(decryption)
+            break
+        else:
+            print("That password is incorrect")
+            
+
+
+check()
+
+
+picoCTF{h45h_sl1ng1ng_36e992a6}
 
