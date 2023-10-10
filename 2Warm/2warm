@@ -1,0 +1,25 @@
+Description
+Can you convert the number 42 (base 10) to binary (base 2)? 
+
+Hints:
+Submit your answer in our competition's flag format. For example, if your answer was '11111', you would submit 'picoCTF{11111}' as the flag.
+
+
+
+In der Binärnotation (Base 2) entspricht die Dezimalzahl 42 der Binärzahl "101010". Hier ist die Umwandlung im Detail:
+
+    Die größte Zweierpotenz, die kleiner oder gleich 42 ist, ist 32 (2^5), und daher setzen wir das erste Bit (von links) auf 1: "1--------".
+
+    Wir ziehen 32 von 42 ab und erhalten 10. Die größte Zweierpotenz, die kleiner oder gleich 10 ist, ist 8 (2^3), also setzen wir das vierte Bit auf 1: "1---1----".
+
+    Wir ziehen 8 von 10 ab und erhalten 2. Die größte Zweierpotenz, die kleiner oder gleich 2 ist, ist 2 (2^1), also setzen wir das zweite Bit auf 1: "10101----".
+
+    Schließlich bleibt 0 übrig, und wir füllen die verbleibenden Stellen mit Nullen auf: "101010".
+
+Das ist die Binärdarstellung der Dezimalzahl 42.
+
+
+Prozess:
+──(root㉿kali)-[/home/…/Desktop/PicoCTF/General Skills/2Warm]
+└─# echo "obase=2; 42" | bc
+101010
