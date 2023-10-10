@@ -1,0 +1,62 @@
+Description:
+Best Stuff - Cheap Stuff, Buy Buy Buy... Store Instance: source. The shop is open for business at nc mercury.picoctf.net 37799.
+
+
+Hints:
+Always check edge cases when programming
+
+Prozess:
+
+wget source
+
+┌──(root㉿kali)-[/home/…/Desktop/PicoCTF/Reverse_Engineering/Shop]
+└─# nc mercury.picoctf.net 37799
+Welcome to the market!
+=====================
+You have 40 coins
+        Item            Price   Count
+(0) Quiet Quiches       10      12
+(1) Average Apple       15      8
+(2) Fruitful Flag       100     1
+(3) Sell an Item
+(4) Exit
+Choose an option: 
+1
+How many do you want to buy?
+-100
+You have 1540 coins
+        Item            Price   Count
+(0) Quiet Quiches       10      12
+(1) Average Apple       15      108
+(2) Fruitful Flag       100     1
+(3) Sell an Item
+(4) Exit
+Choose an option: 
+1
+How many do you want to buy?
+-100
+You have 3040 coins
+        Item            Price   Count
+(0) Quiet Quiches       10      12
+(1) Average Apple       15      208
+(2) Fruitful Flag       100     1
+(3) Sell an Item
+(4) Exit
+Choose an option: 
+2
+How many do you want to buy?
+-111111111111111111111111111111111111111111111111111111111111111111
+You have 3040 coins
+        Item            Price   Count
+(0) Quiet Quiches       10      12
+(1) Average Apple       15      208
+(2) Fruitful Flag       100     1
+(3) Sell an Item
+(4) Exit
+Choose an option: 
+2
+How many do you want to buy?
+1
+Flag is:  [112 105 99 111 67 84 70 123 98 52 100 95 98 114 111 103 114 97 109 109 101 114 95 53 57 49 97 56 57 53 97 125]
+
+Decode Text to Dez: picoCTF{b4d_brogrammer_591a895a}

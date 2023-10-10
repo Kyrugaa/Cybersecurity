@@ -1,0 +1,14 @@
+Description
+There is something on my shop network running at nc mercury.picoctf.net 20301, but I can't tell what it is. Can you?
+
+Hints:
+What language does a CNC machine use?
+
+
+Prozess:
+
+netcat the address, gives us RS-274 (G-Code) code
+
+safed cnc inputs in .gcode file
+visited NC Viewer and type out the flag:
+picoCTF{num3r1cal_c0ntr0l_68a8fe29}
