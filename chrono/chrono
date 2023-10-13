@@ -1,0 +1,46 @@
+Description
+How to automate tasks to run at intervals on linux servers?
+
+Additional details will be available after launching your challenge instance.
+
+Hints:
+none
+
+
+Process:
+
+Launched Instance
+
+How to automate tasks to run at intervals on linux servers? Use ssh to connect to this server:
+
+Server: saturn.picoctf.net
+Port: 65396
+Username: picoplayer 
+Password: emrdK96SGH
+
+
+connect to the pico webshell:
+
+https://webshell.picoctf.org/
+
+Username: RimuTemp
+Password: pw
+
+Permission denied, please try again.
+rimutemp-picoctf@saturn.picoctf.net's password: 
+
+
+rimutemp-picoctf@webshell:~$ ssh picoplayer@saturn.picoctf.net -p 59333
+
+
+picoplayer@challenge:~$ cd /etc
+picoplayer@challenge:/etc$ ls
+adduser.conf            ca-certificates       cron.monthly    default       fstab     gss          init.d       ld.so.conf     logrotate.d  mailcap.order        networks       passwd     rc0.d  rc6.d        shadow   subgid     sysctl.conf  ucf.conf
+alternatives            ca-certificates.conf  cron.weekly     deluser.conf  gai.conf  host.conf    inputrc      ld.so.conf.d   lsb-release  mime.types           nsswitch.conf  passwd-    rc1.d  rcS.d        shadow-  subgid-    sysctl.d     ufw
+apt                     cloud                 crontab         dhcp          group     hostname     issue        legal          machine-id   mke2fs.conf          opt            profile    rc2.d  resolv.conf  shells   subuid     systemd      update-motd.d
+bash.bashrc             cron.d                dbus-1          dpkg          group-    hosts        issue.net    libaudit.conf  magic        modules-load.d       os-release     profile.d  rc3.d  rmt          skel     subuid-    terminfo     wgetrc
+bindresvport.blacklist  cron.daily            debconf.conf    e2scrub.conf  gshadow   hosts.allow  kernel       localtime      magic.mime   mtab                 pam.conf       python3    rc4.d  security     ssh      sudoers    timezone     xattr.conf
+binfmt.d                cron.hourly           debian_version  environment   gshadow-  hosts.deny   ld.so.cache  login.defs     mailcap      networkd-dispatcher  pam.d          python3.8  rc5.d  selinux      ssl      sudoers.d  tmpfiles.d   xdg
+picoplayer@challenge:/etc$ cat crontab
+# picoCTF{Sch3DUL7NG_T45K3_L1NUX_0bb95b71}
+picoplayer@challenge:/etc$ 
