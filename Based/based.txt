@@ -1,0 +1,47 @@
+Description
+To get truly 1337, you must understand different data encodings, such as hexadecimal or binary. Can you get the flag from this program to prove you are on the way to becoming 1337? Connect with nc jupiter.challenges.picoctf.org 29956.
+
+
+Hints:
+
+I hear python can convert things.
+
+
+It might help to have multiple windows open.
+
+
+python script for decoding hexadecimal to utf8:
+hex_string = "636f6e7461696e6572"
+decoded_string = bytes.fromhex(hex_string).decode('utf-8')
+print(decoded_string)
+
+
+
+from binary to utf8 -->https://gchq.github.io/CyberChef/#recipe=From_Binary('Space',8)&input=MDExMTAwMDAgMDExMDAxMDEgMDExMDAwMDEgMDExMTAwMTA
+
+from octal to utf8 --> https://v2.cryptii.com/octal/text
+
+from hexadecimal to utf8 --> chatGTP
+
+                                                                                                                    
+┌──(kali㉿kali)-[~/Desktop/PicoCTF/General Skills/Based]
+└─$ nc jupiter.challenges.picoctf.org 29956        
+Let us see how data is stored
+pear
+Please give the 01110000 01100101 01100001 01110010 as a word.
+...
+you have 45 seconds.....
+
+Input:
+pear
+
+Please give me the  154 151 155 145 as a word.
+Input:
+lime
+
+Please give me the 736f636b6574 as a word.
+Input:
+socket
+
+You've beaten the challenge
+Flag: picoCTF{learning_about_converting_values_b375bb16}
