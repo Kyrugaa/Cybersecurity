@@ -1,0 +1,31 @@
+Description
+I have these 2 images, can you make a flag out of them? scrambled1.png scrambled2.png
+
+
+Hints:
+https://en.wikipedia.org/wiki/Visual_cryptography
+
+Think of different ways you can "stack" images
+
+
+
+Process:
+
+wget
+
+
+used Stagsolver:
+Sometimes there is a message or a text hidden in the image itself that, in order to view it, must have color filters applied, or some color levels changed. Although you can do that with something like GIMP or Photoshop, Stegsolve makes it easier. It's a small Java tool that applies many useful color filters on images; In CTF challenges, Stegsolve is often a real timesaver.
+
+
+Open Stagsolver:
+java -jar stegsolve.jar
+
+Opened scrambled1.png
+
+Headed to Analyse tab and select combine Images
+
+click next until youre in the "ADD" tab
+
+flag:
+picoCTF{2a4d45c7}
